@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio</title>
+</head>
+    <style>
+    body {
+    background-image: url(./assets/pulsorelogio.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    }
+
+    .titulo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aqua;
+    font-size: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 5%;
+    text-align: center;
+    border: 2px solid;
+    }
+
+    .retangulo {
+    border: 2px solid;
+    display: flex;
+    margin-top: 6%;
+    margin-bottom: 15%;
+    margin-left: 8%;
+    margin-right: 8%;
+    }
+    
+    .interior {
+    margin-top: 10%;
+    
+    }
+    </style>
+
+<body>
+    <div class="titulo">
+        <h1>Relógio On-line</h1>
+    </div>
+        <div class="retangulo">
+            <div class="interior">
+                <span id="horas">00 : </span>
+                <span id="minutos">00 : </span>
+                <span id="segundos">00</span>
+            </div>
+        </div>
+</body>
+</html>
