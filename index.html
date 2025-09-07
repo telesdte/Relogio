@@ -78,5 +78,35 @@
                 </div>
             </div>
         </div>
+    
+    <script>
+        var hoje;
+        function Repete() {
+            hoje = new Date();
+            let d = hoje.getDate().toString().padStart(2, '0');
+            let m = (hoje.getMonth() + 1.).toString().padStart(2, '0');
+            let a = hoje.getFullYear();
+            let h = hoje.getHours().toString().padStart(2, '0');
+            let min = hoje.getMinutes().toString().padStart(2, '0');
+            let s = hoje.getSeconds().toString().padStart(2, '0');
+            let diasSemana = ['Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sábado'];
+            let semana = diasSemana[hoje.getDay()];
+
+            document.getElementById("horas").innerText = h + " : ";
+            document.getElementById("minutos").innerText = min + " : ";
+            document.getElementById("segundos").innerText = s;
+            document.getElementById("dia").innerText = d + "/";
+            document.getElementById("mes").innerText = m + "/";
+            document.getElementById("ano").innerText = a + "/";
+            document.getElementById("semana").innerText = semana;
+            window.onload = Relogio();
+        }
+        function Relogio() {
+            Repete();
+            setInterval(Repete, 1000);
+        }
+
+        window.onload = Relogio;
+    </script>
 </body>
 </html>
